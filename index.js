@@ -59,14 +59,40 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice()
-        const computerSelection = getComputerChoice()
-        playRound(humanSelection, computerSelection)
-        console.log(`Player score: ${humanScore}`)
-        console.log(`Computer score: ${computerScore}`)
-    }
-}
+const rockBtn = document.getElementById("rock-btn")
+const paperBtn = document.getElementById("paper-btn")
+const scissorsBtn = document.getElementById("scissors-btn")
 
-playGame()
+rockBtn.addEventListener("click", function() {
+    let humanChoice = 1
+    let computerChoice = getComputerChoice()
+    console.log("Player chose rock")
+    playRound(humanChoice, computerChoice)
+})
+
+paperBtn.addEventListener("click", function() {
+    let humanChoice = 2
+    let computerChoice = getComputerChoice()
+    console.log("Player chose paper")
+    playRound(humanChoice, computerChoice)
+})
+
+scissorsBtn.addEventListener("click", function() {
+    let humanChoice = 3
+    let computerChoice = getComputerChoice()
+    console.log("Player chose scissors")
+    playRound(humanChoice, computerChoice)
+})
+
+
+// function playGame() {
+//     for (let i = 0; i < 5; i++) {
+//         const humanSelection = getHumanChoice()
+//         const computerSelection = getComputerChoice()
+//         playRound(humanSelection, computerSelection)
+//         console.log(`Player score: ${humanScore}`)
+//         console.log(`Computer score: ${computerScore}`)
+//     }
+// }
+
+// playGame()
