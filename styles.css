@@ -1,0 +1,47 @@
+body {
+    background-color: #3c2f2f;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+
+    padding: 10px;
+    border-radius: 15px;
+
+    background-color: #fff4e6;
+    border: 4px #be9b7b;
+    border-style: solid;
+
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #f9e2c3;
+}
+
+button:active {
+    background-color: #fad5a5;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+}
+
+p {
+    color: #fad5a5;
+    font-family: 'kanit';
+    font-size: 20px;
+}
+

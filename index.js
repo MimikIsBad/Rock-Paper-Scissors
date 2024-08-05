@@ -42,16 +42,27 @@ function playRound(humanChoice, computerChoice) {
         computerScore++
         humanScore++
     }
-    playerPoint.textContent = humanScore
-    computerPoint.textContent = computerScore
+    playerPoint.textContent = `Players score: ${humanScore}`
+    computerPoint.textContent = `Computer score: ${computerScore}`
 
     if (humanScore === 5) {
         gameResult.textContent = "Player has won the game"
+        gameEnd()
     } else if (computerScore === 5) {
         gameResult.textContent = "Computer has won the game"
+        gameEnd()
     }
 }
 
+function gameEnd() {
+    rockBtn.disabled = true
+    paperBtn.disabled = true
+    scissorsBtn.disabled = true
+
+    newGame.textContent = "Refresh to start a new game!"
+}
+
+const newGame = document.getElementById("new-game")
 const rockBtn = document.getElementById("rock-btn")
 const paperBtn = document.getElementById("paper-btn")
 const scissorsBtn = document.getElementById("scissors-btn")
